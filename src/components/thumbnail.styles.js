@@ -9,19 +9,21 @@ export const Wrapper = styled.div`
     ),
     url(${(props) => props.imgSrc});
   background-position: center;
-  min-width: 70%;
 
   background-repeat: no-repeat;
-  background-size: 130vw;
-  aspect-ratio: 1/1;
-  margin-inline: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1rem;
   color: white;
+
+  margin-inline: 0.35rem;
+  min-width: 70%;
+  background-size: 130vw;
+  aspect-ratio: 1/1;
   flex-basis: 100%;
-  margin: 0.35rem;
+  padding-top: 0;
 
   span {
     font-size: 0.65em;
