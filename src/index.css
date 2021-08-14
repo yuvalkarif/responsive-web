@@ -132,4 +132,9 @@ table {
   --mediumGrey: #d7d8da;
   --darkGrey: #afb2b7;
   --darkerGrey: #7f8084;
+  --brightPink: rgba(204, 0, 153, 1);
+}
+
+.thumb-section {
+  margin-block: 3rem;
 }

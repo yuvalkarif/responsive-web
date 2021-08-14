@@ -8,10 +8,11 @@ export const Wrapper = styled.div`
     ),
     url(${(props) => props.imgSrc});
   background-position: center;
+  background-size: 200%;
   background-repeat: no-repeat;
   max-width: 85%;
   aspect-ratio: 16/9;
-  margin: 3.5%;
+  margin: 0 3.5%;
   margin-inline: auto;
 
   display: flex;
@@ -36,5 +37,10 @@ export const Wrapper = styled.div`
     padding: 1em 2em;
     border-radius: 2em;
     cursor: pointer;
+  }
+  @media (min-width: 1024px) {
+    margin: 0 15.35rem;
+
+    aspect-ratio: unset;
   }
 `;

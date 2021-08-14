@@ -25,6 +25,8 @@ export const Wrapper = styled.div`
   flex-basis: 100%;
   padding-top: 0;
 
+  cursor: pointer;
+
   span {
     font-size: 0.65em;
     margin-bottom: 0.5em;
@@ -33,5 +35,8 @@ export const Wrapper = styled.div`
   p {
     font-size: 1.15em;
     font-weight: 500;
+  }
+
+  @media (min-width: 960px) {
   }
 `;

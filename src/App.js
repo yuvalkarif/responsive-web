@@ -1,4 +1,4 @@
-import { Swipe, TopSection } from "./app.styles";
+import { ArticlesWrapper, Swipe, TopSection } from "./app.styles";
 import Thumbnail from "./components/thumbnail";
 import BigThumbnail from "./components/bigThumbnail";
 const thumbnails = {
@@ -21,7 +21,13 @@ const thumbnails = {
     category: "SPACE",
   },
 };
-
+const articles = [
+  "OpenAI’s system for translating plain English into code looks impressive — and slightly scary",
+  "Google’s ‘time crystals’ could be the greatest scientific achievement of our lifetimes",
+  "Hacker who stole $600M of crypto returns $260M… ’cos they don’t dig money?",
+  "Don’t adjust your screen: Twitter has a new font for improved accessibility",
+  "Is space infinite? Here are 5 expert opinions",
+];
 function App() {
   return (
     <div className="App">
@@ -29,15 +35,26 @@ function App() {
         <header>TYK</header>
         <span>The tnw clone by Yuval Karif</span>
       </TopSection>
-      <section>
+      <section className="thumb-section">
         <Swipe>
           <Thumbnail info={thumbnails.thumbnail3} />
           <Thumbnail info={thumbnails.thumbnail2} />
           <Thumbnail info={thumbnails.thumbnail1} />
         </Swipe>
+        <BigThumbnail />
       </section>
       <section>
-        <BigThumbnail />
+        <ArticlesWrapper>
+          <h2>POPULAR ARTICLES TODAY</h2>
+          <ol>
+            {articles.map((article, i) => (
+              <li>
+                <h3>{i + 1}</h3>
+                <span>{article}</span>
+              </li>
+            ))}
+          </ol>
+        </ArticlesWrapper>
       </section>
     </div>
   );
